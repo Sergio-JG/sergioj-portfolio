@@ -4,14 +4,20 @@ import Badge from "../components/Badge.astro";
 import LinkedIn from "../components/icons/LinkedIn.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import Social from "../components/icons/Social.astro";
+import Email from "../components/icons/Email.astro";
+import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
 ---
 
-<Layout title="SergioJ Portfolio">
+<Layout
+  title="Portfolio de Sergio - Desarrollador y Programador Web"
+  description="Contrata a Sergio para crear aplicaciones web eficientes y escalables."
+>
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
+    <section class="w-full mx-auto lg:w-[740px] py-40">
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-2 pb-10">
         <img
-          class="rounded-full w-12 h-12 me-3"
+          class="rounded-full size-12 me-3"
           src="https://avatars.githubusercontent.com/u/97886835?v=4"
           alt="sergioj-pic"
         />Hola, soy Sergio <a
@@ -23,30 +29,33 @@ import Social from "../components/icons/Social.astro";
           </Badge>
         </a>
       </h1>
-      <h2 class="text-xl opacity-90">
-        Un desarrollador Full Stack de Zamora, España 🇪🇸 , con 2 años de
-        experiencia en la creación de soluciones web eficientes y escalables. Si
-        bien tengo habilidades en el desarrollo frontend, mi verdadera pasión y
-        enfoque se encuentran en el backend.
+      <h2 class="text-xl tex-wrap opacity-90">
+        Un desarrollador Full Stack de <span class="text-yellow-300/80"
+          >Zamora, España</span
+        >, con <span class="text-purple-300/90">2 años de experiencia</span>
+        en la creación de <span class="text-green-300/90">
+          soluciones web eficientes y escalables
+        </span>. Si bien tengo habilidades en el desarrollo frontend, <span
+          class="text-blue-300/90"
+          >mi verdadera pasión y de enfoque se encuentran en el backend.</span
+        >
       </h2>
       <nav class="flex gap-x-4 mt-8">
         <Social href="https://www.linkedin.com/in/sergiojuarezgago">
-          <LinkedIn class="h-6 y-6" />
+          <LinkedIn class="size-7" />
           LinkedIn
         </Social>
         <Social href="https://github.com/Sergio-JG">
-          <GitHub class="h-6 y-6" />
+          <GitHub class="size-7" />
           GitHub
         </Social>
-        <Social href="https://github.com/Sergio-JG">
-          <GitHub class="h-6 y-6" />
-          GitHub
-        </Social>
-        <Social href="https://github.com/Sergio-JG">
-          <GitHub class="h-6 y-6" />
-          GitHub
+        <Social href="mailto:sergiojbusiness@hotmail.com">
+          <Email class="size-7" />
+          Contáctame
         </Social>
       </nav>
+      <Experience />
+      <Education />
     </section>
   </main>
 </Layout>

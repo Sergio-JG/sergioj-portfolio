@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import ExperienceIcon from "./icons/ExperienceIcon.astro";
+
+const EXPERIENCE = [
+  {
+    start_date: "sep-2023",
+    end_date: "dic-2023",
+    type: "Contrato de prácticas",
+    place: "NTT DATA Europe & Latam",
+    description:
+      "Durante este periodo, contribuí en un proyecto real para Iberdrola, desarrollando microservicios programados en Java y JavaScript. Almacenando los datos y realizando consultas con MySQL. Empleando el uso de una metodología ágil para un desarrollo eficiente y flexible, e implementé pruebas unitarias con JUnit y Mockito. Además, utilicé herramientas como Sonar y Jenkins para garantizar la calidad del código.",
+  },
+  {
+    start_date: "mar.2022",
+    end_date: "jun.2022",
+    type: "Contrato de prácticas",
+    place: "Serbatic",
+    description:
+      "Desarrollo de una web e-commerce utilizando la tecnología Java WebSockets con el framework de Spring. Mapeando los objetos mediante el uso de Hibernate siendo los datos almacenados en una Base de Datos MySQL.",
+  },
+];
+---
+
+<h1 class="text-white text-3xl font-semibold flex flex-row gap-x-2 py-10">
+  <ExperienceIcon />
+  Experiencia
+</h1>
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
