@@ -1,5 +1,5 @@
 ---
-import EducationItem from "./EducationItem.astro";
+import EducationItem from "./items/EducationItem.astro";
 import EducationIcon from "./icons/EducationIcon.astro";
 
 const EDUCATION = [
@@ -22,7 +22,9 @@ const EDUCATION = [
 ];
 ---
 
-<h1 class="text-white text-3xl font-semibold flex flex-row gap-x-2 py-10">
+<h1
+  class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center pb-10"
+>
   <EducationIcon />
   Educación
 </h1>

@@ -1,0 +1,61 @@
+---
+import GitHub from "../icons/GitHub.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  github: string;
+  link: string;
+  tags: {
+    name: string;
+    svg: string;
+    class: string;
+  }[];
+  image: string;
+}
+
+const { title, description, link, tags, github, image } = Astro.props;
+---
+
+<article class="py-5">
+  <nav class="flex lg:gap-x-4 gap-x-3">
+    <h3 class="text-2xl text-purple-400 dark:text-purple-400">
+      {title}
+    </h3>
+    <a href="https://github.com/Sergio-JG/GameManiaWeb">
+      <GitHub class="lg:size-6 size-8" />
+    </a>
+  </nav>
+  <p
+    class="text-lg text-pretty font-normal text-white-500 dark:text-white-400 opacity-80 my-5"
+  >
+    {description}
+  </p>
+  <p
+    class="text-base font-normal text-white-500 dark:text-white-400 opacity-80"
+  >
+    <ul class="flex flex-row lg:gap-x-4 gap-x-3 py-5">
+      {
+        tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xl ${tag.class}`}>
+              <span set:html={tag.svg} />
+              {tag.name}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+    {
+      image && (
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+          <img
+            src={image}
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt={`Captura del proyecto ${title}`}
+          />
+        </div>
+      )
+    }
+  </p>
+</article>
