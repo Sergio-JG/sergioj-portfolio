@@ -8,6 +8,7 @@ import Email from "../components/icons/Email.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout
@@ -35,15 +36,13 @@ import Projects from "../components/Projects.astro";
         </a>
       </div>
       <h2 class="text-2xl text-wrap opacity-90 pt-5 max-w-[700px]">
-        Un desarrollador Full Stack de <span class="text-yellow-300/80"
-          >Zamora, España</span
-        >, con <span class="text-purple-300/90">2 años de experiencia</span>
-        en la creación de <span class="text-green-300/90">
-          soluciones web eficientes y escalables
-        </span>. Si bien tengo habilidades en el desarrollo frontend, <span
-          class="text-blue-300/90"
-          >mi verdadera pasión y de enfoque se encuentran en el backend.</span
+        <span class="text-yellow-300/80">Desarrollador Full Stack </span>de
+        Zamora, España,<span class="text-purple-300/90">
+          +2 años de experiencia</span
         >
+        en la creación de <span class="text-green-300/90">
+          soluciones web eficientes y escalables.
+        </span>
       </h2>
       <nav class="flex lg:gap-x-4 gap-x-3 mt-8 mb-8">
         <Social href="https://www.linkedin.com/in/sergiojuarezgago">
@@ -71,6 +70,10 @@ import Projects from "../components/Projects.astro";
 
     <section id="proyectos" class="w-full mx-auto lg:w-[740px] pb-10 py-5">
       <Projects />
+    </section>
+
+    <section id="sobreMi" class="w-full mx-auto lg:w-[740px] pb-10 py-5">
+      <AboutMe />
     </section>
   </main>
 </Layout>
