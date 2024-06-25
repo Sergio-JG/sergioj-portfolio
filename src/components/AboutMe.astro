@@ -3,13 +3,13 @@ import AboutMeIcon from "./icons/AboutMeIcon.astro";
 ---
 
 <h1
-  class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center pb-10"
+  class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center pb-10 md:text-2xl sm:text-xl sm:pb-5"
 >
   <AboutMeIcon />
   Sobre mí
 </h1>
-<div class="flex gap-x-8 justify-center items-center">
-  <div class="text-justify font-semibold">
+<div class="flex gap-x-8 justify-center items-center flex-col md:flex-row">
+  <div class="text-justify font-semibold mb-5">
     <p class="mb-5 text-justify">
       Mi nombre es Sergio, <span class="text-purple-300/80"
         >empecé en el mundo de la programación hace 5 años</span
@@ -32,5 +32,9 @@ import AboutMeIcon from "./icons/AboutMeIcon.astro";
     </p>
   </div>
 
-  <img class="rounded-full size-60 mx-5" src="/sj.jpg" alt="sergioj-pic" />
+  <img
+    class="rounded-full size-60 mx-5 sm:mx-2"
+    src="/sj.jpg"
+    alt="sergioj-pic"
+  />
 </div>
