@@ -1,0 +1,23 @@
+---
+import CopyIcon from "./icons/CopyIcon.astro";
+import Email from "./icons/Email.astro";
+import FitContainer from "./icons/FitContainer.astro";
+import Social from "./icons/Social.astro";
+---
+
+<script>
+  const button = document.getElementById("copyClick");
+  button?.addEventListener("click", () => {
+    navigator.clipboard.writeText("sergiojbusiness@hotmail.com");
+  });
+</script>
+
+<nav class="flex flex-row gap-x-2">
+  <FitContainer> sergiojbusiness@hotmail.com </FitContainer>
+  <Social href="mailto:sergiojbusiness@hotmail.com">
+    <Email class="lg:size-7 size-3" />
+  </Social>
+  <Social id="copyClick">
+    <CopyIcon class="lg:size-7 size-3" />
+  </Social>
+</nav>

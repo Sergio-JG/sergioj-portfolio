@@ -9,6 +9,11 @@ import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Projects from "../components/Projects.astro";
 import AboutMe from "../components/AboutMe.astro";
+import Curriculum from "../components/icons/Curriculum.astro";
+import Address from "../components/icons/Address.astro";
+import CopyIcon from "../components/icons/CopyIcon.astro";
+import FitContainer from "../components/icons/FitContainer.astro";
+import CopySnippet from "../components/CopySnippet.astro";
 ---
 
 <Layout
@@ -16,7 +21,7 @@ import AboutMe from "../components/AboutMe.astro";
   description="Contrata a Sergio para crear aplicaciones web eficientes y escalables."
 >
   <main>
-    <section id="top" class="w-full mx-auto lg:w-[740px] lg:pb-7 pb-6 pt-20">
+    <section id="top" class="w-full mx-auto lg:w-[740px] lg:pb-7 pt-20">
       <div class="flex flex-row gap-x-6">
         <img
           class="rounded-full size-20"
@@ -53,11 +58,25 @@ import AboutMe from "../components/AboutMe.astro";
           <GitHub class="lg:size-7 size-3" />
           GitHub
         </Social>
-        <Social href="mailto:sergiojbusiness@hotmail.com">
-          <Email class="lg:size-7 size-3" />
-          Contáctame
+        <Social
+          href="/files/Curriculum - Sergio Juárez Gago.pdf"
+          download="Curriculum - Sergio Juárez Gago.pdf"
+        >
+          <Curriculum class="lg:size-7 size-3" />
+          Descargar CV
         </Social>
       </nav>
+      <nav class="flex lg:gap-x-4 gap-x-3 mt-8 mb-8"></nav>
+    </section>
+
+    <section id="contactame" class="w-full mx-auto lg:w-[740px] pb-10 pb-5">
+      <h1
+        class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center pb-10"
+      >
+        <Address />
+        Contáctame
+      </h1>
+      <CopySnippet />
     </section>
 
     <section id="experiencia" class="w-full mx-auto lg:w-[740px] pb-10 py-5">
