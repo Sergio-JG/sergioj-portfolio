@@ -4,16 +4,15 @@ import Badge from "../components/Badge.astro";
 import LinkedIn from "../components/icons/LinkedIn.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import Social from "../components/icons/Social.astro";
-import Email from "../components/icons/Email.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Projects from "../components/Projects.astro";
 import AboutMe from "../components/AboutMe.astro";
 import Curriculum from "../components/icons/Curriculum.astro";
 import Address from "../components/icons/Address.astro";
-import CopyIcon from "../components/icons/CopyIcon.astro";
-import FitContainer from "../components/icons/FitContainer.astro";
 import CopySnippet from "../components/CopySnippet.astro";
+import TechStackItem from "../components/items/TechStackItem.astro";
+import TechStack from "../components/icons/TechStack.astro";
 ---
 
 <Layout
@@ -21,7 +20,7 @@ import CopySnippet from "../components/CopySnippet.astro";
   description="Contrata a Sergio para crear aplicaciones web eficientes y escalables."
 >
   <main>
-    <section id="top" class="w-full mx-auto lg:w-[740px] lg:pb-7 pt-20">
+    <section id="top" class="w-full mx-auto lg:w-[740px] pt-20">
       <div class="flex flex-row gap-x-6">
         <img
           class="rounded-full size-20"
@@ -66,10 +65,19 @@ import CopySnippet from "../components/CopySnippet.astro";
           Descargar CV
         </Social>
       </nav>
-      <nav class="flex lg:gap-x-4 gap-x-3 mt-8 mb-8"></nav>
     </section>
 
-    <section id="contactame" class="w-full mx-auto lg:w-[740px] pb-10 pb-5">
+    <section id="techstack" class="w-full mx-auto lg:w-[740px] py-5">
+      <h1
+        class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center pb-10"
+      >
+        <TechStack />
+        TechStack
+      </h1>
+      <TechStackItem />
+    </section>
+
+    <section id="contactame" class="w-full mx-auto lg:w-[740px] py-5">
       <h1
         class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center pb-10"
       >
@@ -79,19 +87,19 @@ import CopySnippet from "../components/CopySnippet.astro";
       <CopySnippet />
     </section>
 
-    <section id="experiencia" class="w-full mx-auto lg:w-[740px] pb-10 py-5">
-      <Experience />
-    </section>
-
-    <section id="educacion" class="w-full mx-auto lg:w-[740px] pb-10 py-5">
-      <Education />
-    </section>
-
-    <section id="proyectos" class="w-full mx-auto lg:w-[740px] pb-10 py-5">
+    <section id="proyectos" class="w-full mx-auto lg:w-[740px] py-5">
       <Projects />
     </section>
 
-    <section id="sobreMi" class="w-full mx-auto lg:w-[740px] pb-10 py-5">
+    <section id="experiencia" class="w-full mx-auto lg:w-[740px] py-5">
+      <Experience />
+    </section>
+
+    <section id="educacion" class="w-full mx-auto lg:w-[740px] py-5">
+      <Education />
+    </section>
+
+    <section id="sobreMi" class="w-full mx-auto lg:w-[740px] py-5">
       <AboutMe />
     </section>
   </main>
