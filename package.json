@@ -13,8 +13,12 @@
     "@astrojs/check": "^0.9.3",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/poppins": "^5.0.13",
+<<<<<<< HEAD
     "astro": "^4.15.4",
     "sergioj-portfolio": "file:",
+=======
+    "astro": "^4.11.5",
+>>>>>>> 1fad78e9d43fd0572238ed19ddf295ac0c9e3565
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
   }

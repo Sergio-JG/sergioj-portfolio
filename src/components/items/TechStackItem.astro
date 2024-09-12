@@ -1,0 +1,134 @@
+---
+import {
+  FRONT,
+  BACK,
+  DB,
+  FRAMEWORKS,
+  VERSION_CONTROL,
+  INTEGRATION,
+  CLOUD,
+} from "../Technologies.astro";
+---
+
+<section>
+  <h3 class="pb-5">Front</h3>
+  <ul class="flex flex-row lg:gap-x-4 gap-x-3">
+    <li>
+      <span class={`flex gap-x-2 rounded-full text-l ${FRONT.REACT.class}`}>
+        <span set:html={FRONT.REACT.svg} />
+        {FRONT.REACT.name}
+      </span>
+    </li>
+    <li>
+      <span
+        class={`flex gap-x-2 rounded-full text-l ${FRONT.TYPESCRIPT.class}`}
+      >
+        <span set:html={FRONT.TYPESCRIPT.svg} />
+        {FRONT.TYPESCRIPT.name}
+      </span>
+    </li>
+
+    <li>
+      <span
+        class={`flex gap-x-2 rounded-full text-l ${FRONT.JAVASCRIPT.class}`}
+      >
+        <span set:html={FRONT.JAVASCRIPT.svg} />
+        {FRONT.JAVASCRIPT.name}
+      </span>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h3 class="py-5">Back</h3>
+  <ul class="flex flex-row lg:gap-x-4 gap-x-3 py-2">
+    <li>
+      <span class={`flex gap-x-2 rounded-full text-l ${BACK.JAVA.class}`}>
+        <span set:html={BACK.JAVA.svg} />
+        {BACK.JAVA.name}
+      </span>
+    </li>
+    <li>
+      <span class={`flex gap-x-2 rounded-full text-l ${BACK.PHP.class}`}>
+        <span set:html={BACK.PHP.svg} />
+        {BACK.PHP.name}
+      </span>
+    </li>
+    <li>
+      <span
+        class={`flex gap-x-2 rounded-full text-l ${FRAMEWORKS.SPRING.class}`}
+      >
+        <span set:html={FRAMEWORKS.SPRING.svg} />
+        {FRAMEWORKS.SPRING.name}
+      </span>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h3 class="py-5">Cloud</h3>
+  <ul class="flex flex-row lg:gap-x-4 gap-x-3 py-2">
+    <li>
+      <span class={`flex gap-x-2 rounded-full text-l ${CLOUD.AWS.class}`}>
+        <span set:html={CLOUD.AWS.svg} />
+        {CLOUD.AWS.name} (RDS, S3, Lambda)
+      </span>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h3 class="py-5">Bases de Datos</h3>
+  <ul class="flex flex-row lg:gap-x-4 gap-x-3 py-2">
+    <li>
+      <span class={`flex gap-x-2 rounded-full text-l ${DB.MYSQL.class}`}>
+        <span set:html={DB.MYSQL.svg} />
+        {DB.MYSQL.name}
+      </span>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h3 class="py-5">Control de versiones</h3>
+  <ul class="flex flex-row lg:gap-x-4 gap-x-3 py-2">
+    <li>
+      <span
+        class={`flex gap-x-2 rounded-full text-l ${VERSION_CONTROL.GIT.class}`}
+      >
+        <span set:html={VERSION_CONTROL.GIT.svg} />
+        {VERSION_CONTROL.GIT.name}
+      </span>
+    </li>
+    <li>
+      <span
+        class={`flex gap-x-2 rounded-full text-l ${VERSION_CONTROL.GITHUB.class}`}
+      >
+        <span set:html={VERSION_CONTROL.GITHUB.svg} />
+        {VERSION_CONTROL.GITHUB.name}
+      </span>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h3 class="py-5">Integración</h3>
+  <ul class="flex flex-row lg:gap-x-4 gap-x-3 py-2">
+    <li>
+      <span
+        class={`flex gap-x-2 rounded-full text-l ${INTEGRATION.SONAR.class}`}
+      >
+        <span set:html={INTEGRATION.SONAR.svg} />
+        {INTEGRATION.SONAR.name}
+      </span>
+    </li>
+    <li>
+      <span
+        class={`flex gap-x-2 rounded-full text-l ${INTEGRATION.JENKINS.class}`}
+      >
+        <span set:html={INTEGRATION.JENKINS.svg} />
+        {INTEGRATION.JENKINS.name}
+      </span>
+    </li>
+  </ul>
+</section>

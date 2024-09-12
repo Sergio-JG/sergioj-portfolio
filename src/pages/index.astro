@@ -4,11 +4,15 @@ import Badge from "../components/Badge.astro";
 import LinkedIn from "../components/icons/LinkedIn.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import Social from "../components/icons/Social.astro";
-import Email from "../components/icons/Email.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Projects from "../components/Projects.astro";
 import AboutMe from "../components/AboutMe.astro";
+import Curriculum from "../components/icons/Curriculum.astro";
+import Address from "../components/icons/Address.astro";
+import CopySnippet from "../components/CopySnippet.astro";
+import TechStackItem from "../components/items/TechStackItem.astro";
+import TechStack from "../components/icons/TechStack.astro";
 ---
 
 <Layout
@@ -16,14 +20,14 @@ import AboutMe from "../components/AboutMe.astro";
   description="Contrata a Sergio para crear aplicaciones web eficientes y escalables."
 >
   <main>
-    <section id="top" class="w-full mx-auto lg:w-[740px] lg:pb-7 pb-6 pt-20">
+    <section id="top" class="w-full mx-auto lg:w-[740px] pt-28">
       <div class="flex flex-row gap-x-6">
         <img
-          class="rounded-full size-20"
+          class="rounded-full size-16"
           src="https://avatars.githubusercontent.com/u/97886835?v=4"
           alt="sergioj-pic"
         />
-        <h1 class="lg:text-4xl sm:text-2xl text-center mt-5">
+        <h1 class="lg:text-2xl sm:text-xl text-center mt-5">
           Hola, soy Sergio
         </h1>
         <a
@@ -35,9 +39,10 @@ import AboutMe from "../components/AboutMe.astro";
           </Badge>
         </a>
       </div>
-      <h2 class="text-2xl text-wrap opacity-90 pt-5 max-w-[700px]">
-        <span class="text-yellow-300/80">Desarrollador Full Stack </span>de
-        Zamora, España,<span class="text-purple-300/90">
+      <h2 class="text-xl text-wrap opacity-90 pt-5 max-w-[700px]">
+        <span class="text-yellow-300/80">Desarrollador Full Stack </span>con <span
+          class="text-purple-300/90"
+        >
           6 meses de experiencia</span
         >
         en la creación de <span class="text-green-300/90">
@@ -53,26 +58,40 @@ import AboutMe from "../components/AboutMe.astro";
           <GitHub class="lg:size-7 size-3" />
           GitHub
         </Social>
-        <Social href="mailto:sergiojbusiness@hotmail.com">
-          <Email class="lg:size-7 size-3" />
-          Contáctame
+        <Social
+          href="/files/Curriculum - Sergio Juárez Gago.pdf"
+          download="Curriculum - Sergio Juárez Gago.pdf"
+        >
+          <Curriculum class="lg:size-7 size-3" />
+          Descargar CV
         </Social>
       </nav>
+      <CopySnippet />
     </section>
 
-    <section id="experiencia" class="w-full mx-auto lg:w-[740px] pb-10 py-5">
+    <section id="tech-stack" class="w-full mx-auto lg:w-[740px] py-5">
+      <h1
+        class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center pb-10"
+      >
+        <TechStack />
+        Tech Stack
+      </h1>
+      <TechStackItem />
+    </section>
+
+    <section id="experiencia" class="w-full mx-auto lg:w-[740px] py-5">
       <Experience />
     </section>
 
-    <section id="educacion" class="w-full mx-auto lg:w-[740px] pb-10 py-5">
-      <Education />
-    </section>
-
-    <section id="proyectos" class="w-full mx-auto lg:w-[740px] pb-10 py-5">
+    <section id="proyectos" class="w-full mx-auto lg:w-[740px] py-5">
       <Projects />
     </section>
 
-    <section id="sobreMi" class="w-full mx-auto lg:w-[740px] pb-10 py-5">
+    <section id="educacion" class="w-full mx-auto lg:w-[740px] py-5">
+      <Education />
+    </section>
+
+    <section id="sobre-mi" class="w-full mx-auto lg:w-[740px] py-5">
       <AboutMe />
     </section>
   </main>
