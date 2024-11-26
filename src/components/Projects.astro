@@ -1,32 +1,14 @@
 ---
-import ProjectIcon from "./icons/ProjectIcon.astro";
 import ProjectItem from "./items/ProjectItem.astro";
-import { FRONT, BACK, DB, FRAMEWORKS } from "./Technologies.astro";
+import { project_dictionary } from "../i18n/translation";
+import { getLangFromUrl } from "../i18n/utils";
 
-const PROJECTS = [
-  {
-    title: "Gamemania",
-    description: `Una plataforma online para comprar videojuegos, que incluye un apartado para que los administradores gestionen y supervisen la web.`,
-    github: "https://github.com/Sergio-JG/GameManiaWeb",
-    link: "",
-    tags: [FRONT.REACT, FRONT.TYPESCRIPT],
-    image: "/projects/Gamemania.webp",
-  },
-  {
-    title: "Gamemania API",
-    description: `API REST complementaria al proyecto Gamemania.`,
-    github: "https://github.com/Sergio-JG/GameManiaAPI",
-    link: "",
-    tags: [BACK.JAVA, FRAMEWORKS.SPRING, DB.MYSQL],
-    image: "",
-  },
-];
+const lang = getLangFromUrl(Astro.url);
 ---
 
-<h1
-  class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center pb-5"
->
-  <ProjectIcon />
-  Proyectos
-</h1>
-{PROJECTS.map((proyect) => <ProjectItem {...proyect} />)}
+{
+  (lang === "es"
+    ? project_dictionary.PROJECT_ES
+    : project_dictionary.PROJECT_EN
+  ).map((project) => <ProjectItem {...project} />)
+}

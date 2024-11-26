@@ -1,36 +1,33 @@
 ---
-import AboutMeIcon from "./icons/AboutMeIcon.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<h1
-  class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center pb-10 md:text-2xl sm:text-xl sm:pb-5"
+<div
+  class="flex flex-col-reverse gap-6 justify-center items-center md:flex-row"
 >
-  <AboutMeIcon />
-  Sobre mí
-</h1>
-<div class="flex gap-x-8 justify-center items-center flex-col md:flex-row">
-  <div class="text-justify font-semibold mb-5">
-    <p class="mb-5 text-justify">
-      Mi nombre es Sergio<span class="text-yellow-300/80">
-        y empecé en el mundo de la programación hace 5 años</span
-      >. A día de hoy, mi sueño es encontrar un lugar donde me sienta cómodo y
-      pueda aportar mis conocimientos y habilidades.
+  <div class="text-justify font-semibold">
+    <p class="mb-5">
+      {t("about_me_part_1")}<span class="text-yellow-300/80">
+        {t("about_me_part_2")}
+      </span>
+      {t("about_me_part_3")}
     </p>
-    <p class="mb-5 text-justify">
-      Amante del mundo de los videojuegos y de la música, no le hago el feo a
-      ningún género. También, en ocasiones, siento la necesidad de ver alguna
-      película o serie.
-    </p>
-    <p class="mb-5 text-justify">
-      Una de las cosas que más me caracteriza es que soy una persona bastante <span
-        class="text-green-300/80">sociable</span
-      >, intentando en todo momento ser un buen compañero para mis colegas, <span
-        class="text-purple-300/80">a la par que competitiva</span
-      >. Siempre trato de ayudar a mi equipo a conseguir la victoria, <span
-        class="text-orange-300/80">dando el 100% de mí</span
-      >.
+    <p class="mb-5">{t("about_me_part_4")}</p>
+    <p class="mb-5">
+      {t("about_me_part_5")}
+      <span class="text-green-300/80">{t("about_me_part_6")}</span>
+      {t("about_me_part_7")}
+      <span class="text-purple-300/80">{t("about_me_part_8")}</span>
+      {t("about_me_part_9")}
+      <span class="text-orange-300/80">{t("about_me_part_10")}</span>.
     </p>
   </div>
-
-  <img class="rounded-full size-60" src="/sj.jpg" alt="sergioj-pic" />
+  <img
+    class="rounded-full w-40 h-40 sm:w-32 sm:h-32 xs:w-24 xs:h-24"
+    src="/sj.jpg"
+    alt="sergioj-pic"
+  />
 </div>

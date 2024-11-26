@@ -1,13 +1,11 @@
 ---
 interface Props {
-  start_date: string;
-  end_date: string;
+  date: string;
   type: string;
-  place: string;
   description: string;
 }
 
-const { start_date, end_date, type, place, description } = Astro.props;
+const { date, type, description } = Astro.props;
 ---
 
 <div
@@ -16,10 +14,10 @@ const { start_date, end_date, type, place, description } = Astro.props;
 </div>
 <time
   class="mb-1 text-sm font-normal leading-none text-purple-400 dark:text-gray-500"
-  >{start_date} - {end_date}</time
->
+  >{date}
+</time>
 <h3 class="text-lg font-semibold text-green-400 dark:text-white">
-  {type} - {place}
+  {type}
 </h3>
 <p
   class="text-base font-normal text-white-500 dark:text-white-400 opacity-80 text-pretty"

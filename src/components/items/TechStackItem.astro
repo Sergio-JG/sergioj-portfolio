@@ -7,7 +7,12 @@ import {
   VERSION_CONTROL,
   INTEGRATION,
   CLOUD,
-} from "../Technologies.astro";
+} from "../../i18n/translation";
+
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section>
@@ -78,7 +83,7 @@ import {
 </section>
 
 <section>
-  <h3 class="py-5">Bases de Datos</h3>
+  <h3 class="py-5">{t("tech_stack_database")}</h3>
   <ul class="flex flex-row lg:gap-x-4 gap-x-3 py-2">
     <li>
       <span class={`flex gap-x-2 rounded-full text-l ${DB.MYSQL.class}`}>
@@ -90,7 +95,7 @@ import {
 </section>
 
 <section>
-  <h3 class="py-5">Control de versiones</h3>
+  <h3 class="py-5">{t("tech_stack_version_control")}</h3>
   <ul class="flex flex-row lg:gap-x-4 gap-x-3 py-2">
     <li>
       <span
@@ -112,7 +117,7 @@ import {
 </section>
 
 <section>
-  <h3 class="py-5">Integración</h3>
+  <h3 class="py-5">{t("tech_stack_integration")}</h3>
   <ul class="flex flex-row lg:gap-x-4 gap-x-3 py-2">
     <li>
       <span

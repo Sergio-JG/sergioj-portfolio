@@ -1,8 +1,15 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <footer
   class="flex justify-between items-center w-full xl:w-[1120px] mx-auto py-10 px-2"
 >
   <span class="text-sm sm:text-center text-gray-300 dark:text-gray-200"
-    >© 2024 Sergio-JG. Hola Mundo.</span
+    >{t("footer_copyright")}</span
   >
   <ul
     class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-300 dark:text-gray-200 sm:mt-0"

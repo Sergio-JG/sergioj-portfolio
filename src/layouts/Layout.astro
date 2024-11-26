@@ -19,13 +19,16 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <!-- Google tag (gtag.js) -->
-    <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-SN8CYWJ1LY"></script>
+    <script
+      type="text/javascript"
+      src="https://www.googletagmanager.com/gtag/js?id=G-SN8CYWJ1LY"></script>
     <script type="text/javascript">
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-SN8CYWJ1LY');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-SN8CYWJ1LY");
     </script>
     <title>{title}</title>
   </head>

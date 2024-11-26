@@ -1,37 +1,18 @@
 ---
 import EducationItem from "./items/EducationItem.astro";
-import EducationIcon from "./icons/EducationIcon.astro";
+import { education_dictionary } from "../i18n/translation";
+import { getLangFromUrl } from "../i18n/utils";
 
-const EDUCATION = [
-  {
-    name: "Desarrollo de Aplicaciones Web (DAW)",
-    start_date: "2022",
-    end_date: "2023",
-    place: "IES CLAUDIO MOYANO",
-    description:
-      "Desarrollé aplicaciones web mediante el uso de HTML, CSS, JavaScript y librerías de estilo como Bootstrap.Realicé un trabajo grupal en lenguaje PHP, empleando herramientas como Git y GitHub. Mi proyecto final de grado consistió en el desarrollo de una API REST en lenguaje Java con el framework de Spring, manejando recursos como Hibernate. Para la parte Frontend desarrollé una página web sirviéndome de React, Material UI y en lenguaje TypeScript. La gestión de datos la realicé en MySQL.",
-  },
-  {
-    name: "Desarrollo de Aplicaciones Multiplataforma (DAM)",
-    start_date: "2020",
-    end_date: "2022",
-    place: "IES CLAUDIO MOYANO",
-    description:
-      "Trabajé en el desarrollo de aplicaciones de escritorio y aplicaciones móvil Android mediante el uso del lenguaje Java poniendo en práctica el Modelo Vista Controlador MVC. Aprendí nociones básicas de Unity programando en el lenguaje C++. Incrementé mis nociones de Bases de Datos MySQL. Realicé un proyecto de final de grado con Unity empleando el lenguaje C++.",
-  },
-];
+const lang = getLangFromUrl(Astro.url);
 ---
 
-<h1
-  class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center pb-10"
->
-  <EducationIcon />
-  Educación
-</h1>
 <ol class="relative border-s border-gray-200 dark:border-gray-700">
   {
-    EDUCATION.map((education) => (
-      <li class="mb-10 ms-4">
+    (lang === "es"
+      ? education_dictionary.EDUCATION_ES
+      : education_dictionary.EDUCATION_EN
+    ).map((education) => (
+      <li class="mb-5 ms-4">
         <EducationItem {...education} />
       </li>
     ))

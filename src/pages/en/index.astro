@@ -1,0 +1,136 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Badge from "../../components/Badge.astro";
+import LinkedIn from "../../components/icons/LinkedIn.astro";
+import GitHub from "../../components/icons/GitHub.astro";
+import Social from "../../components/icons/Social.astro";
+import Experience from "../../components/Experience.astro";
+import Education from "../../components/Education.astro";
+import Projects from "../../components/Projects.astro";
+import AboutMe from "../../components/AboutMe.astro";
+import Curriculum from "../../components/icons/Curriculum.astro";
+import CopySnippet from "../../components/CopySnippet.astro";
+import TechStackItem from "../../components/items/TechStackItem.astro";
+import TechStack from "../../components/icons/TechStack.astro";
+
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import ExperienceIcon from "../../components/icons/ExperienceIcon.astro";
+import ProjectIcon from "../../components/icons/ProjectIcon.astro";
+import EducationIcon from "../../components/icons/EducationIcon.astro";
+import AboutMeIcon from "../../components/icons/AboutMeIcon.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t("html_title")} description={t("html_description")}>
+  <main class="px-5">
+    <section class="w-full mx-auto lg:w-[740px] pt-40">
+      <div class="flex flex-row gap-x-6">
+        <img
+          class="rounded-full size-16"
+          src="https://avatars.githubusercontent.com/u/97886835?v=4"
+          alt="sergioj-pic"
+        />
+        <h1 class="lg:text-2xl sm:text-xl text-center mt-5">
+          {t("top_greeting")}
+        </h1>
+        <a
+          href="https://www.linkedin.com/in/sergiojuarezgago"
+          target="_blank"
+          rel="noopener"
+          ><div class="flex justify-center items-center"></div><Badge>
+            {t("top_label")}
+          </Badge>
+        </a>
+      </div>
+      <h2 class="text-xl text-wrap opacity-90 pt-5 max-w-[700px]">
+        <span class="text-yellow-300/80">{t("top_text_part_1")} </span>{
+          t("top_text_part_2")
+        }<span class="text-purple-300/90"> {t("top_text_part_3")} </span>{
+          t("top_text_part_4")
+        }<span class="text-green-300/90"> {t("top_text_part_5")}</span>.
+      </h2>
+      <nav class="flex lg:gap-x-4 gap-x-3 mt-8 mb-8">
+        <Social href="https://www.linkedin.com/in/sergiojuarezgago">
+          <LinkedIn class="lg:size-7 size-3" />
+          LinkedIn
+        </Social>
+        <Social href="https://github.com/Sergio-JG">
+          <GitHub class="lg:size-7 size-3" />
+          GitHub
+        </Social>
+        <Social
+          href="/files/CV - Sergio Juárez Gago (ESP).pdf"
+          download="CV - Sergio Juárez Gago (ESP).pdf"
+        >
+          <Curriculum class="lg:size-7 size-3" />
+          {t("top_download_cv_text")}
+        </Social>
+      </nav>
+      <CopySnippet />
+    </section>
+
+    <section
+      id="tech_stack"
+      class="w-full mx-auto lg:w-[740px] py-5 scroll-mt-10"
+    >
+      <h1
+        class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center py-5"
+      >
+        <TechStack />
+        {t("tech_stack")}
+      </h1>
+      <TechStackItem />
+    </section>
+
+    <section
+      id="experience"
+      class="w-full mx-auto lg:w-[740px] py-5 scroll-mt-10"
+    >
+      <h1
+        class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center py-5"
+      >
+        <ExperienceIcon />
+        {t("experience")}
+      </h1>
+      <Experience />
+    </section>
+
+    <section
+      id="projects"
+      class="w-full mx-auto lg:w-[740px] py-5 scroll-mt-10"
+    >
+      <h1
+        class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center py-5"
+      >
+        <ProjectIcon />
+        {t("projects")}
+      </h1>
+      <Projects />
+    </section>
+
+    <section
+      id="education"
+      class="w-full mx-auto lg:w-[740px] py-5 scroll-mt-10"
+    >
+      <h1
+        class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center py-5"
+      >
+        <EducationIcon />
+        {t("education")}
+      </h1>
+      <Education />
+    </section>
+
+    <section id="about_me" class="w-full mx-auto lg:w-[740px] py-5">
+      <h1
+        class="text-yellow-300/80 text-3xl font-semibold flex gap-x-2 items-center py-5"
+      >
+        <AboutMeIcon />
+        {t("about_me")}
+      </h1>
+      <AboutMe />
+    </section>
+  </main>
+</Layout>

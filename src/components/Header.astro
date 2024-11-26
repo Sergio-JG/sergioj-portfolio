@@ -1,40 +1,123 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Spain from "./icons/Spain.astro";
+import English from "./icons/English.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<script>
+  let currentAnchor = "";
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            currentAnchor = entry.target.id;
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.5,
+      }
+    );
+    sections.forEach((section) => observer.observe(section));
+  });
+  function redirect() {
+    const currentUrl = window.location.href;
+    const isSpanish = currentUrl.includes("/es");
+    const newLang = isSpanish ? "en" : "es";
+    const baseUrl = currentUrl.split("#")[0];
+
+    // Detectar si la página está en la parte superior
+    const isAtTop = window.scrollY === 0;
+
+    const newUrl = isAtTop
+      ? `${baseUrl.replace(isSpanish ? "/es" : "/en", `/${newLang}`)}`
+      : `${baseUrl.replace(isSpanish ? "/es" : "/en", `/${newLang}`)}#${currentAnchor}`;
+
+    window.location.href = newUrl;
+  }
+  const button = document.getElementById("languageChanger");
+  button?.addEventListener("click", redirect);
+</script>
+
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-5"
 >
   <nav
     class="flex bg-gray-950 border px-3 text-sm sm:text-0px font-medium rounded-full text-gray-200 dark:text-gray-200 justify-center items-center"
   >
+    <a href="#"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-square-arrow-up"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M16 12l-4 -4l-4 4"></path><path d="M12 16v-8"></path><path
+          d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+        ></path></svg
+      ></a
+    >
     <a
       class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-      aria-label="tech-stack"
-      href="#tech-stack"
+      aria-label="tech_stack"
+      href="#tech_stack"
     >
-      Tech Stack
+      {t("tech_stack")}
     </a>
     <a
       class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-      aria-label="experiencia"
-      href="#experiencia"
+      aria-label="experience"
+      href="#experience"
     >
-      Experiencia
-    </a><a
+      {t("experience")}
+    </a>
+    <a
       class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-      aria-label="proyectos"
-      href="#proyectos"
+      aria-label="projects"
+      href="#projects"
     >
-      Proyectos
-    </a><a
+      {t("projects")}
+    </a>
+    <a
       class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-      aria-label="educación"
-      href="#educacion"
+      aria-label="education"
+      href="#education"
     >
-      Educación
-    </a><a
+      {t("education")}
+    </a>
+    <a
       class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
-      aria-label="sobre-mi"
-      href="#sobre-mi"
+      aria-label="about_me"
+      href="#about_me"
     >
-      Sobre mí
+      {t("about_me")}
+    </a>
+    <a>
+      <button class="px-2 py-2" id="languageChanger">
+        {
+          lang === "es" ? (
+            <>
+              <English />
+            </>
+          ) : (
+            <>
+              <Spain />
+            </>
+          )
+        }
+      </button>
     </a>
   </nav>
 </header>

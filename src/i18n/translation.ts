@@ -1,4 +1,3 @@
----
 export const FRONT = {
   REACT: {
     name: "React",
@@ -151,4 +150,206 @@ export const INTEGRATION = {
     class: "text-red-300/90",
   },
 };
----
+
+export const languages = {
+  es: "Spanish",
+  en: "English",
+};
+
+export const defaultLang = "es";
+
+export const experience_dictionary = {
+  EXPERIENCE_EN: [
+    {
+      date: "Sep.2023 - Dec.2023",
+      type: "Internship Contract - NTT DATA Europe & Latam",
+      description:
+        "I contributed to a real project for Iberdrola, developing microservices programmed in Java and JavaScript. Storing data and performing queries with MySQL. Using an agile methodology for efficient and flexible development, I implemented unit tests with JUnit and Mockito. Additionally, I used tools like Sonar and Jenkins to ensure code quality.",
+    },
+    {
+      date: "Mar.2022 - Jun.2022",
+      type: "Internship Contract - Serbatic",
+      description:
+        "I developed an e-commerce website using Java WebSockets technology with the Spring framework. Mapped objects using Hibernate, with data stored in a MySQL database.",
+    },
+  ],
+  EXPERIENCE_ES: [
+    {
+      date: "Sep.2023 - Dic.2023",
+      type: "Contrato de prácticas - NTT DATA Europe & Latam",
+      description:
+        "Contribuí en un proyecto real para Iberdrola, desarrollando microservicios programados en Java y JavaScript. Almacenando los datos y realizando consultas con MySQL. Empleando el uso de una metodología ágil para un desarrollo eficiente y flexible, e implementé pruebas unitarias con JUnit y Mockito. Además, utilicé herramientas como Sonar y Jenkins para garantizar la calidad del código.",
+    },
+    {
+      date: "Mar.2022 - Jun.2022",
+      type: "Contrato de prácticas - Serbatic",
+      description:
+        "Desarrollé una web e-commerce utilizando la tecnología Java WebSockets con el framework de Spring. Mapeando los objetos mediante el uso de Hibernate siendo los datos almacenados en una Base de Datos MySQL.",
+    },
+  ],
+};
+
+export const project_dictionary = {
+  PROJECT_EN: [
+    {
+      title: "Gamemania",
+      description: `An online platform for purchasing video games, including a section for administrators to manage and oversee the website.`,
+      github: "https://github.com/Sergio-JG/GameManiaWeb",
+      link: "",
+      tags: [FRONT.REACT, FRONT.TYPESCRIPT],
+      image: "/projects/Gamemania.webp",
+    },
+    {
+      title: "Gamemania API",
+      description: `REST API complementary to the Gamemania project.`,
+      github: "https://github.com/Sergio-JG/GameManiaAPI",
+      link: "",
+      tags: [BACK.JAVA, FRAMEWORKS.SPRING, DB.MYSQL],
+      image: "",
+    },
+  ],
+  PROJECT_ES: [
+    {
+      title: "Gamemania",
+      description: `Una plataforma online para comprar videojuegos, que incluye un apartado para que los administradores gestionen y supervisen la web.`,
+      github: "https://github.com/Sergio-JG/GameManiaWeb",
+      link: "",
+      tags: [FRONT.REACT, FRONT.TYPESCRIPT],
+      image: "/projects/Gamemania.webp",
+    },
+    {
+      title: "Gamemania API",
+      description: `API REST complementaria al proyecto Gamemania.`,
+      github: "https://github.com/Sergio-JG/GameManiaAPI",
+      link: "",
+      tags: [BACK.JAVA, FRAMEWORKS.SPRING, DB.MYSQL],
+      image: "",
+    },
+  ],
+};
+
+export const education_dictionary = {
+  EDUCATION_ES: [
+    {
+      name: "Desarrollo de Aplicaciones Web (DAW)",
+      start_date: "2022",
+      end_date: "2023",
+      place: "IES CLAUDIO MOYANO",
+      description:
+        "Desarrollé aplicaciones web mediante el uso de HTML, CSS, JavaScript y librerías de estilo como Bootstrap. Realicé un trabajo grupal en lenguaje PHP, empleando herramientas como Git y GitHub. Mi proyecto final de grado consistió en el desarrollo de una API REST en lenguaje Java con el framework de Spring, manejando recursos como Hibernate. Para la parte Frontend desarrollé una página web sirviéndome de React, Material UI y en lenguaje TypeScript. La gestión de datos la realicé en MySQL.",
+    },
+    {
+      name: "Desarrollo de Aplicaciones Multiplataforma (DAM)",
+      start_date: "2020",
+      end_date: "2022",
+      place: "IES CLAUDIO MOYANO",
+      description:
+        "Trabajé en el desarrollo de aplicaciones de escritorio y aplicaciones móvil Android mediante el uso del lenguaje Java poniendo en práctica el Modelo Vista Controlador (MVC). Aprendí nociones básicas de Unity programando en el lenguaje C++. Incrementé mis nociones de Bases de Datos MySQL. Realicé un proyecto de final de grado con Unity empleando el lenguaje C++.",
+    },
+  ],
+  EDUCATION_EN: [
+    {
+      name: "Web Application Development (DAW)",
+      start_date: "2022",
+      end_date: "2023",
+      place: "IES CLAUDIO MOYANO",
+      description:
+        "I developed web applications using HTML, CSS, JavaScript, and style libraries like Bootstrap. I participated in a group project using PHP, utilizing tools like Git and GitHub. My final degree project consisted of developing a REST API in Java with the Spring framework, managing resources with Hibernate. For the Frontend, I developed a website using React, Material UI, and TypeScript. Data management was carried out using MySQL.",
+    },
+    {
+      name: "Cross-Platform Application Development (DAM)",
+      start_date: "2020",
+      end_date: "2022",
+      place: "IES CLAUDIO MOYANO",
+      description:
+        "I worked on developing desktop applications and Android mobile applications using Java, applying the Model-View-Controller (MVC) design pattern. I learned basic Unity concepts and programmed in C++. I enhanced my knowledge of MySQL databases. My final degree project involved Unity development using C++.",
+    },
+  ],
+};
+
+export const ui = {
+  es: {
+    html_title: "Portfolio de Sergio - Desarrollador y Programador Web",
+    html_description:
+      "Contrata a Sergio para crear aplicaciones web eficientes y escalables.",
+    tech_stack: "Tecnologías",
+    experience: "Experiencia",
+    projects: "Proyectos",
+    education: "Educación",
+    about_me: "Sobre mí",
+    //
+    top_greeting: "Hola, soy Sergio",
+    top_label: "Disponible para trabajar",
+    top_text_part_1: "Desarrollador Full Stack",
+    top_text_part_2: "con",
+    top_text_part_3: "6 meses de experiencia",
+    top_text_part_4: "en la creación de",
+    top_text_part_5: "soluciones web eficientes y escalables",
+    top_download_cv_text: "Descargar CV",
+    top_download_cv_href: "/files/CV - Sergio Juárez Gago (ENG).pdf",
+    top_download_cv_html: "CV - Sergio Juárez Gago (ENG).pdf",
+    //
+    tech_stack_database: "Bases de Datos",
+    tech_stack_version_control: "Control de versiones",
+    tech_stack_integration: "Integración",
+    //
+    about_me_part_1: "Mi nombre es Sergio y ",
+    about_me_part_2: "empecé en el mundo de la programación hace 5 años",
+    about_me_part_3:
+      ". A día de hoy, mi sueño es encontrar un lugar donde me sienta cómodo y pueda aportar con mis conocimientos y habilidades.",
+    about_me_part_4:
+      "Amante del mundo de los videojuegos y de la música, no le hago el feo a ningún género. También, en ocasiones, siento la necesidad de ver alguna película o serie. ",
+    about_me_part_5:
+      "Una de las cosas que más me caracteriza es que soy una persona bastante ",
+    about_me_part_6: "sociable",
+    about_me_part_7: ", intentando en todo momento ser un buen compañero, ",
+    about_me_part_8: "a la par que competitiva",
+    about_me_part_9:
+      ". Siempre trato de ayudar a mi equipo a conseguir la victoria, ",
+    about_me_part_10: "dando el 100% de mí",
+    //
+    footer_copyright: "2024 Sergio-JG. Hola Mundo.",
+  },
+  en: {
+    html_title: "Sergio's Portfolio - Web Developer and Programmer",
+    html_description:
+      "Hire Sergio to create efficient and scalable web applications.",
+    //
+    tech_stack: "Technologies",
+    experience: "Experience",
+    projects: "Projects",
+    education: "Education",
+    about_me: "About Me",
+    //
+    top_greeting: "Hi, I'm Sergio",
+    top_label: "Available for Work",
+    top_text_part_1: "Full Stack Developer",
+    top_text_part_2: "with",
+    top_text_part_3: "6 months of experience",
+    top_text_part_4: "in creating",
+    top_text_part_5: "efficient and scalable web solutions",
+    top_download_cv_text: "Download CV",
+    top_download_cv_href: "/files/CV - Sergio Juárez Gago (ENG).pdf",
+    top_download_cv_html: "CV - Sergio Juárez Gago (ENG).pdf",
+    //
+    tech_stack_database: "Databases",
+    tech_stack_version_control: "Version Control",
+    tech_stack_integration: "Integration",
+    //
+    about_me_part_1: "My name is Sergio, and ",
+    about_me_part_2: "I started programming 5 years ago",
+    about_me_part_3:
+      ". Today, my dream is to find a place where I feel comfortable and can contribute with my knowledge and skills.",
+    about_me_part_4:
+      "A lover of video games and music, I enjoy all genres. Sometimes, I also feel the need to watch a movie or series.",
+    about_me_part_5:
+      "One of the things that best defines me is that I am a very ",
+    about_me_part_6: "sociable",
+    about_me_part_7: " person, always striving to be a good teammate, ",
+    about_me_part_8: "as well as competitive",
+    about_me_part_9: ". I always try to help my team achieve victory, ",
+    about_me_part_10: "giving my 100%",
+    //
+    footer_copyright: "2024 Sergio-JG. Hello World.",
+  },
+} as const;
