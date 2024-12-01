@@ -56,14 +56,18 @@ interface Props {
 
       function redirect() {
         const currentUrl = window.location.href;
-        const isSpanish = currentUrl.includes("/es");
-        const newLang = isSpanish ? "en" : "es";
+        const isEnglish = currentUrl.includes("/en");
         const baseUrl = currentUrl.split("#")[0];
-        const isAtTop = window.scrollY === 0;
 
+        const isAtTop = window.scrollY === 0;
+        const currentAnchor = window.location.hash.replace("#", "");
+
+        const cleanBaseUrl = isEnglish ? baseUrl.replace("/en", "") : baseUrl;
+
+        const newLangPrefix = isEnglish ? "" : "en";
         const newUrl = isAtTop
-          ? `${baseUrl.replace(isSpanish ? "/es" : "/en", `/${newLang}`)}`
-          : `${baseUrl.replace(isSpanish ? "/es" : "/en", `/${newLang}`)}#${currentAnchor}`;
+          ? `${cleanBaseUrl}${newLangPrefix}`
+          : `${cleanBaseUrl}${newLangPrefix}#${currentAnchor}`;
 
         window.location.href = newUrl;
       }
@@ -72,11 +76,13 @@ interface Props {
       button?.addEventListener("click", redirect);
     </script>
   </head>
-  <body>
-    <Header />
-    <slot />
-    <Footer />
-  </body>
+  <main>
+    <body class="px-4">
+      <Header />
+      <slot />
+      <Footer />
+    </body>
+  </main>
   <SideMenu />
   <style is:global>
     :root {
@@ -100,4 +106,6 @@ interface Props {
       }
     }
   </style>
+
+
 </html>
