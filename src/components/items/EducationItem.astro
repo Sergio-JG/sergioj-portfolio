@@ -4,7 +4,7 @@ interface Props {
   start_date: string;
   end_date: string;
   place: string;
-  description: string;
+  description: { [key: string]: string | undefined };
 }
 
 const { start_date, end_date, place, description, name } = Astro.props;
@@ -21,8 +21,16 @@ const { start_date, end_date, place, description, name } = Astro.props;
 <h3 class="text-lg font-semibold text-green-400 dark:text-white">
   {name} - {place}
 </h3>
-<p
+<ul
   class="text-base font-normal text-white-500 dark:text-white-400 opacity-80 text-pretty"
 >
-  {description}
-</p>
+  {
+    Object.entries(description).map(([key, value]) =>
+      value ? (
+        <li id={key} class="ms-5" style="list-style-type: circle;">
+          {value}
+        </li>
+      ) : null
+    )
+  }
+</ul>

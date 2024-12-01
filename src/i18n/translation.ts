@@ -162,27 +162,27 @@ export const experience_dictionary = {
   EXPERIENCE_EN: [
     {
       date: "Sep.2023 - Dec.2023",
-      type: "Internship Contract - NTT DATA Europe & Latam",
+      type: "Software Developer Assistant - NTT DATA Europe & Latam",
       description:
-        "I contributed to a real project for Iberdrola, developing microservices programmed in Java and JavaScript. Storing data and performing queries with MySQL. Using an agile methodology for efficient and flexible development, I implemented unit tests with JUnit and Mockito. Additionally, I used tools like Sonar and Jenkins to ensure code quality.",
+        "During this period, I contributed to a project for Iberdrola, focusing on the development of microservices programmed in Java and JavaScript. I handled data and performed queries using MySQL. Using an agile methodology for efficient and flexible development, I implemented unit tests with JUnit and Mockito. Additionally, I utilized tools such as Sonar and Jenkins to ensure code quality.",
     },
     {
       date: "Mar.2022 - Jun.2022",
-      type: "Internship Contract - Serbatic",
+      type: "Software Developer - Serbatic",
       description:
-        "I developed an e-commerce website using Java WebSockets technology with the Spring framework. Mapped objects using Hibernate, with data stored in a MySQL database.",
+        "I developed an e-commerce website using WebSockets in Java with the Spring framework, mapping objects with Hibernate and storing data with a MySQL database.",
     },
   ],
   EXPERIENCE_ES: [
     {
       date: "Sep.2023 - Dic.2023",
-      type: "Contrato de prácticas - NTT DATA Europe & Latam",
+      type: "Asistente de Desarrollo de Software - NTT DATA Europe & Latam",
       description:
         "Contribuí en un proyecto real para Iberdrola, desarrollando microservicios programados en Java y JavaScript. Almacenando los datos y realizando consultas con MySQL. Empleando el uso de una metodología ágil para un desarrollo eficiente y flexible, e implementé pruebas unitarias con JUnit y Mockito. Además, utilicé herramientas como Sonar y Jenkins para garantizar la calidad del código.",
     },
     {
       date: "Mar.2022 - Jun.2022",
-      type: "Contrato de prácticas - Serbatic",
+      type: "Desarrollador de Software - Serbatic",
       description:
         "Desarrollé una web e-commerce utilizando la tecnología Java WebSockets con el framework de Spring. Mapeando los objetos mediante el uso de Hibernate siendo los datos almacenados en una Base de Datos MySQL.",
     },
@@ -235,16 +235,21 @@ export const education_dictionary = {
       start_date: "2022",
       end_date: "2023",
       place: "IES CLAUDIO MOYANO",
-      description:
-        "Desarrollé aplicaciones web mediante el uso de HTML, CSS, JavaScript y librerías de estilo como Bootstrap. Realicé un trabajo grupal en lenguaje PHP, empleando herramientas como Git y GitHub. Mi proyecto final de grado consistió en el desarrollo de una API REST en lenguaje Java con el framework de Spring, manejando recursos como Hibernate. Para la parte Frontend desarrollé una página web sirviéndome de React, Material UI y en lenguaje TypeScript. La gestión de datos la realicé en MySQL.",
+      description: {
+        "1": "Desarrollé aplicaciones web con HTML, CSS, JavaScript y bibliotecas de estilo como Bootstrap.",
+        "2": "Participé en un proyecto grupal utilizando PHP y herramientas de control de versiones como Git.",
+      },
     },
     {
       name: "Desarrollo de Aplicaciones Multiplataforma (DAM)",
       start_date: "2020",
       end_date: "2022",
       place: "IES CLAUDIO MOYANO",
-      description:
-        "Trabajé en el desarrollo de aplicaciones de escritorio y aplicaciones móvil Android mediante el uso del lenguaje Java poniendo en práctica el Modelo Vista Controlador (MVC). Aprendí nociones básicas de Unity programando en el lenguaje C++. Incrementé mis nociones de Bases de Datos MySQL. Realicé un proyecto de final de grado con Unity empleando el lenguaje C++.",
+      description: {
+        "1": "Desarrollé aplicaciones de escritorio y Android utilizando Java, aplicando el patrón de diseño MVC.",
+        "2": "Aprendí conceptos básicos de Unity y programé en C++.",
+        "3": "Amplié mis conocimientos sobre bases de datos MySQL.",
+      },
     },
   ],
   EDUCATION_EN: [
@@ -253,16 +258,21 @@ export const education_dictionary = {
       start_date: "2022",
       end_date: "2023",
       place: "IES CLAUDIO MOYANO",
-      description:
-        "I developed web applications using HTML, CSS, JavaScript, and style libraries like Bootstrap. I participated in a group project using PHP, utilizing tools like Git and GitHub. My final degree project consisted of developing a REST API in Java with the Spring framework, managing resources with Hibernate. For the Frontend, I developed a website using React, Material UI, and TypeScript. Data management was carried out using MySQL.",
+      description: {
+        "1": "Developed web applications with HTML, CSS, JavaScript, and styling libraries such as Bootstrap.",
+        "2": "Participated in a group project using PHP and version control tools like Git.",
+      },
     },
     {
       name: "Cross-Platform Application Development (DAM)",
       start_date: "2020",
       end_date: "2022",
       place: "IES CLAUDIO MOYANO",
-      description:
-        "I worked on developing desktop applications and Android mobile applications using Java, applying the Model-View-Controller (MVC) design pattern. I learned basic Unity concepts and programmed in C++. I enhanced my knowledge of MySQL databases. My final degree project involved Unity development using C++.",
+      description: {
+        "1": "Developed desktop and Android applications using Java, applying the MVC design pattern.",
+        "2": "Learned basic Unity concepts and programmed in C++.",
+        "3": "Enhanced knowledge of MySQL databases.",
+      },
     },
   ],
 };
@@ -277,6 +287,7 @@ export const ui = {
     projects: "Proyectos",
     education: "Educación",
     about_me: "Sobre mí",
+    top: "Inicio",
     //
     top_greeting: "Hola, soy Sergio",
     top_label: "Disponible para trabajar",
@@ -285,7 +296,7 @@ export const ui = {
     top_text_part_3: "6 meses de experiencia",
     top_text_part_4: "en la creación de",
     top_text_part_5: "soluciones web eficientes y escalables",
-    top_download_cv_text: "Descargar CV",
+    top_download_cv_text: "CV",
     top_download_cv_href: "/files/CV - Sergio Juárez Gago (ENG).pdf",
     top_download_cv_html: "CV - Sergio Juárez Gago (ENG).pdf",
     //
@@ -320,6 +331,7 @@ export const ui = {
     projects: "Projects",
     education: "Education",
     about_me: "About Me",
+    top: "Start",
     //
     top_greeting: "Hi, I'm Sergio",
     top_label: "Available for Work",
@@ -328,7 +340,7 @@ export const ui = {
     top_text_part_3: "6 months of experience",
     top_text_part_4: "in creating",
     top_text_part_5: "efficient and scalable web solutions",
-    top_download_cv_text: "Download CV",
+    top_download_cv_text: "CV",
     top_download_cv_href: "/files/CV - Sergio Juárez Gago (ENG).pdf",
     top_download_cv_html: "CV - Sergio Juárez Gago (ENG).pdf",
     //

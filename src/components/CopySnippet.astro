@@ -1,7 +1,7 @@
 ---
 import CopyIcon from "./icons/CopyIcon.astro";
 import Email from "./icons/Email.astro";
-import FitContainer from "./icons/FitContainer.astro";
+import FitContainer from "./FitContainer.astro";
 import Social from "./icons/Social.astro";
 ---
 
@@ -12,12 +12,14 @@ import Social from "./icons/Social.astro";
   });
 </script>
 
-<nav class="flex flex-row gap-x-2">
-  <FitContainer> sergiojbusiness@hotmail.com </FitContainer>
+<div class="flex flex-row gap-2">
+  <FitContainer>
+    <p class="text-xs lg:text-sm">sergiojbusiness@hotmail.com</p>
+  </FitContainer>
   <Social href="mailto:sergiojbusiness@hotmail.com">
-    <Email class="lg:size-7 size-5" />
+    <Email class="size-5" />
   </Social>
   <Social id="copyClick">
-    <CopyIcon class="lg:size-7 size-5" />
+    <CopyIcon class="size-5" />
   </Social>
-</nav>
+</div>

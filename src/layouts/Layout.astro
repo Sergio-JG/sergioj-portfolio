@@ -1,14 +1,15 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import "@fontsource/poppins/600.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import SideMenu from "../components/SideMenu.astro";
+
+const { title, description } = Astro.props;
 
 interface Props {
   title: string;
   description: string;
 }
-
-const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,6 +20,8 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <!-- Google -->
     <script
       type="text/javascript"
       src="https://www.googletagmanager.com/gtag/js?id=G-SN8CYWJ1LY"></script>
@@ -30,33 +33,71 @@ const { title, description } = Astro.props;
       gtag("js", new Date());
       gtag("config", "G-SN8CYWJ1LY");
     </script>
-    <title>{title}</title>
+    <script>
+      let currentAnchor = "";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section[id]");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                currentAnchor = entry.target.id;
+              }
+            });
+          },
+          {
+            root: null,
+            threshold: 0.5,
+          }
+        );
+        sections.forEach((section) => observer.observe(section));
+      });
+
+      function redirect() {
+        const currentUrl = window.location.href;
+        const isSpanish = currentUrl.includes("/es");
+        const newLang = isSpanish ? "en" : "es";
+        const baseUrl = currentUrl.split("#")[0];
+        const isAtTop = window.scrollY === 0;
+
+        const newUrl = isAtTop
+          ? `${baseUrl.replace(isSpanish ? "/es" : "/en", `/${newLang}`)}`
+          : `${baseUrl.replace(isSpanish ? "/es" : "/en", `/${newLang}`)}#${currentAnchor}`;
+
+        window.location.href = newUrl;
+      }
+
+      const button = document.getElementById("languageChanger");
+      button?.addEventListener("click", redirect);
+    </script>
   </head>
-  <body class="px-4">
+  <body>
     <Header />
     <slot />
     <Footer />
   </body>
-</html>
-<style is:global>
-  :root {
-    color-scheme: dark light;
-  }
-  html {
-    font-family: "poppins", system-ui, sans-serif;
-    scroll-behavior: smooth;
-  }
-  body {
-    background: radial-gradient(#000 10%, #000 40%, #63e 190%);
-    display: flex;
-    color: white;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
+  <SideMenu />
+  <style is:global>
+    :root {
+      color-scheme: dark light;
     }
-  }
-</style>
+    html {
+      font-family: "poppins", system-ui, sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      background: radial-gradient(#000 10%, #000 40%, #63e 190%);
+      display: flex;
+      color: white;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</html>

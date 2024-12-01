@@ -1,0 +1,49 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Education from "./Education.astro";
+import Experience from "./Experience.astro";
+import AboutMeIcon from "./icons/AboutMeIcon.astro";
+import EducationIcon from "./icons/EducationIcon.astro";
+import ExperienceIcon from "./icons/ExperienceIcon.astro";
+import ProjectIcon from "./icons/ProjectIcon.astro";
+import TechStack from "./icons/TechStack.astro";
+import TopIcon from "./icons/TopIcon.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div
+  id="sideMenu"
+  class="fixed top-20 left-0 z-40 w-48 h-screen bg-gray-950 text-white border-e-[2px] border-t-[1px]"
+>
+  <nav class="mt-16">
+    <ul class="space-y-4">
+      <li class="flex px-4 py-2">
+        <div class="text-yellow-300/80"><TopIcon /></div>
+        <a href="#" class="block ps-2"> {t("top")} </a>
+      </li>
+      <li class="flex px-4 py-2">
+        <div class="text-yellow-300/80"><TechStack /></div>
+        <a href="#tech_stack" class="block ps-2"> {t("tech_stack")} </a>
+      </li>
+      <li class="flex px-4 py-2">
+        <div class="text-yellow-300/80"><ExperienceIcon /></div>
+
+        <a href="#experience" class="block pt-1 ps-2">{t("experience")}</a>
+      </li>
+      <li class="flex px-4 py-2">
+        <div class="text-yellow-300/80"><ProjectIcon /></div>
+        <a href="#projects" class="block ps-2">{t("projects")}</a>
+      </li>
+      <li class="flex px-4 py-2">
+        <div class="text-yellow-300/80"><EducationIcon /></div>
+        <a href="#bottom" class="block ps-2">{t("education")}</a>
+      </li>
+      <li class="flex px-4 py-2">
+        <div class="text-yellow-300/80"><AboutMeIcon /></div>
+        <a href="#bottom" class="block ps-2">{t("about_me")}</a>
+      </li>
+    </ul>
+  </nav>
+</div>
