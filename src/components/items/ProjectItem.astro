@@ -1,5 +1,6 @@
 ---
 import GitHub from "../icons/GitHub.astro";
+import Website from "../icons/Website.astro";
 
 interface Props {
   title: string;
@@ -25,6 +26,13 @@ const { title, description, link, tags, github, image } = Astro.props;
     <a href={github}>
       <GitHub class="lg:size-6 size-8" />
     </a>
+    {
+      link && (
+        <a href={link}>
+          <Website class="lg:size-6 size-8" />
+        </a>
+      )
+    }
   </nav>
   <p
     class="text-lg text-pretty font-normal text-white-500 dark:text-white-400 opacity-80 my-5"
