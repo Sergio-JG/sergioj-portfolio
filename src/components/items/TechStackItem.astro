@@ -91,6 +91,12 @@ const t = useTranslations(lang);
         {DB.MYSQL.name}
       </span>
     </li>
+    <li>
+      <span class={`flex gap-x-2 rounded-full text-l ${DB.POSTGRESQL.class}`}>
+        <span set:html={DB.POSTGRESQL.svg} />
+        {DB.POSTGRESQL.name}
+      </span>
+    </li>
   </ul>
 </section>
 
