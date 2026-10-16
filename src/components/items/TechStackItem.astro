@@ -7,6 +7,7 @@ import {
   VERSION_CONTROL,
   INTEGRATION,
   CLOUD,
+  CMS,
 } from "../../i18n/translation";
 
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
@@ -140,6 +141,32 @@ const t = useTranslations(lang);
         <span set:html={INTEGRATION.JENKINS.svg} />
         {INTEGRATION.JENKINS.name}
       </span>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h3 class="py-5">CMS</h3>
+  <ul class="flex flex-row lg:gap-x-4 gap-x-3 py-2">
+    <li>
+      <span class={`flex gap-x-2 rounded-full text-l ${CMS.WORDPRESS.class}`}>
+        <span set:html={CMS.WORDPRESS.svg} />
+        {CMS.WORDPRESS.name}
+      </span>
+      <li>
+        <span class={`flex gap-x-2 rounded-full text-l ${CMS.ELEMENTOR.class}`}>
+          <span set:html={CMS.ELEMENTOR.svg} />
+          {CMS.ELEMENTOR.name}
+        </span>
+      </li>
+      <li>
+        <span
+          class={`flex gap-x-2 rounded-full text-l ${CMS.WOOCOMMERCE.class}`}
+        >
+          <span set:html={CMS.WOOCOMMERCE.svg} />
+          {CMS.WOOCOMMERCE.name}
+        </span>
+      </li>
     </li>
   </ul>
 </section>

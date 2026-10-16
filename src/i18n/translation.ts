@@ -156,6 +156,38 @@ export const INTEGRATION = {
   },
 };
 
+export const CMS = {
+  WOOCOMMERCE: {
+    name: "WooCommerce",
+    svg: `<svg class='size-7' viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h16l-1.5 13h-13L4 7Zm4-2a4 4 0 0 1 8 0h-2a2 2 0 0 0-4 0H8Z"/><path d="m7.5 10 1 6 2-4 1.5 3 2.5-5h2l-3.8 8h-1.5l-1.4-2.8-1.4 2.8H7L5.5 10h2Z" fill="white"/></svg>`,
+    class: "text-purple-400/90",
+  },
+  ELEMENTOR: {
+    name: "Elementor",
+    svg: `<svg class='size-7' viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11"/><path d="M7 7h2v10H7zm4 0h7v2h-7zm0 4h6v2h-6zm0 4h7v2h-7z" fill="white"/></svg>`,
+    class: "text-pink-600/90",
+  },
+  WORDPRESS: {
+    name: "Wordpress",
+    svg: `<svg class='size-7' viewBox="0 0 122.52 122.523" width="122.52" height="122.523" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+  ><g
+    ><path
+      d="m8.708 61.26c0 20.802 12.089 38.779 29.619 47.298l-25.069-68.686c-2.916 6.536-4.55 13.769-4.55 21.388z"
+    ></path><path
+      d="m96.74 58.608c0-6.495-2.333-10.993-4.334-14.494-2.664-4.329-5.161-7.995-5.161-12.324 0-4.831 3.664-9.328 8.825-9.328.233 0 .454.029.681.042-9.35-8.566-21.807-13.796-35.489-13.796-18.36 0-34.513 9.42-43.91 23.688 1.233.037 2.395.063 3.382.063 5.497 0 14.006-.667 14.006-.667 2.833-.167 3.167 3.994.337 4.329 0 0-2.847.335-6.015.501l19.138 56.925 11.501-34.493-8.188-22.434c-2.83-.166-5.511-.501-5.511-.501-2.832-.166-2.5-4.496.332-4.329 0 0 8.679.667 13.843.667 5.496 0 14.006-.667 14.006-.667 2.835-.167 3.168 3.994.337 4.329 0 0-2.853.335-6.015.501l18.992 56.494 5.242-17.517c2.272-7.269 4.001-12.49 4.001-16.989z"
+    ></path><path
+      d="m62.184 65.857-15.768 45.819c4.708 1.384 9.687 2.141 14.846 2.141 6.12 0 11.989-1.058 17.452-2.979-.141-.225-.269-.464-.374-.724z"
+    ></path><path
+      d="m107.376 36.046c.226 1.674.354 3.471.354 5.404 0 5.333-.996 11.328-3.996 18.824l-16.053 46.413c15.624-9.111 26.133-26.038 26.133-45.426.001-9.137-2.333-17.729-6.438-25.215z"
+    ></path><path
+      d="m61.262 0c-33.779 0-61.262 27.481-61.262 61.26 0 33.783 27.483 61.263 61.262 61.263 33.778 0 61.265-27.48 61.265-61.263-.001-33.779-27.487-61.26-61.265-61.26zm0 119.715c-32.23 0-58.453-26.223-58.453-58.455 0-32.23 26.222-58.451 58.453-58.451 32.229 0 58.45 26.221 58.45 58.451 0 32.232-26.221 58.455-58.45 58.455z"
+    ></path></g
+  ></svg
+>`,
+    class: "text-blue-600/90",
+  },
+};
+
 export const languages = {
   es: "Spanish",
   en: "English",
@@ -165,6 +197,12 @@ export const defaultLang = "es";
 
 export const experience_dictionary = {
   EXPERIENCE_EN: [
+    {
+      date: "Sep.2026 - Oct.2026",
+      type: "Desarrollador de Software - European Business School",
+      description:
+        "I developed an e-commerce website dedicated to selling wine and related products using the WordPress CMS and plugins such as WooCommerce and Elementor. I also implemented a secure payment system and optimized the user experience with an intuitive and attractive design.",
+    },
     {
       date: "Sep.2023 - Dec.2023",
       type: "Software Developer Assistant - NTT DATA Europe & Latam",
@@ -179,6 +217,12 @@ export const experience_dictionary = {
     },
   ],
   EXPERIENCE_ES: [
+    {
+      date: "Sep.2026 - Oct.2026",
+      type: "Desarrollador de Software - European Business School",
+      description:
+        "Desarrollé una pagina e-commerce dedicada a la venta de vinos y productos relacionados utilizando el CMS Wordpress, utilizando plugins como WooCommerce y Elementor. Además, implementé un sistema de pago seguro y optimicé la experiencia del usuario mediante un diseño intuitivo y atractivo.",
+    },
     {
       date: "Sep.2023 - Dic.2023",
       type: "Asistente de Desarrollo de Software - NTT DATA Europe & Latam",
@@ -212,6 +256,13 @@ export const project_dictionary = {
       tags: [BACK.JAVA, FRAMEWORKS.SPRING, DB.POSTGRESQL],
       image: "",
     },
+    {
+      title: "Vinery",
+      description: `Online platform for purchasing wine and related products.`,
+      link: "https://e26-atusergioj-vy.pruebamiweb.com/",
+      tags: [CMS.WORDPRESS, CMS.WOOCOMMERCE, CMS.ELEMENTOR],
+      image: "/projects/Vinery.webp",
+    },
   ],
   PROJECT_ES: [
     {
@@ -229,6 +280,13 @@ export const project_dictionary = {
       link: "",
       tags: [BACK.JAVA, FRAMEWORKS.SPRING, DB.POSTGRESQL],
       image: "",
+    },
+    {
+      title: "Vinery",
+      description: `Plataforma online para la compra de vino y productos relacionados.`,
+      link: "https://e26-atusergioj-vy.pruebamiweb.com/",
+      tags: [CMS.WORDPRESS, CMS.WOOCOMMERCE, CMS.ELEMENTOR],
+      image: "/projects/Vinery.webp",
     },
   ],
 };
@@ -298,7 +356,7 @@ export const ui = {
     top_label: "Disponible para trabajar",
     top_text_part_1: "Desarrollador Full Stack",
     top_text_part_2: "con",
-    top_text_part_3: "6 meses de experiencia",
+    top_text_part_3: "7 meses de experiencia",
     top_text_part_4: "en la creación de",
     top_text_part_5: "soluciones web eficientes y escalables",
     top_download_cv_text: "CV",
@@ -309,22 +367,10 @@ export const ui = {
     tech_stack_version_control: "Control de versiones",
     tech_stack_integration: "Integración",
     //
-    about_me_part_1: "Mi nombre es Sergio y ",
-    about_me_part_2: "empecé en el mundo de la programación hace 5 años",
-    about_me_part_3:
-      ". A día de hoy, mi sueño es encontrar un lugar donde me sienta cómodo y pueda aportar con mis conocimientos y habilidades.",
-    about_me_part_4:
-      "Amante del mundo de los videojuegos y de la música, no le hago el feo a ningún género. También, en ocasiones, siento la necesidad de ver alguna película o serie. ",
-    about_me_part_5:
-      "Una de las cosas que más me caracteriza es que soy una persona bastante ",
-    about_me_part_6: "sociable",
-    about_me_part_7: ", intentando en todo momento ser un buen compañero, ",
-    about_me_part_8: "a la par que competitiva",
-    about_me_part_9:
-      ". Siempre trato de ayudar a mi equipo a conseguir la victoria, ",
-    about_me_part_10: "dando el 100% de mí",
+    about_me_text:
+      "Mi nombre es Sergio y llevo 5 años apasionado por el desarrollo de software. Mi objetivo actual es seguir creciendo como Desarrollador Full Stack en un equipo dinámico donde pueda aportar mis conocimientos en tecnología web, resolver problemas complejos y seguir aprendiendo mejores prácticas.Fuera del código, me entusiasma el mundo de los videojuegos, la música y el cine. Me considero una persona sociable, muy orientada al trabajo en equipo y con un espíritu competitivo sano: siempre busco dar el 100% para que el proyecto y el equipo alcancen sus metas.",
     //
-    footer_copyright: "2025 Sergio-JG. Hola Mundo.",
+    footer_copyright: "2026 Sergio-JG. Hola Mundo.",
   },
   en: {
     html_title: "Sergio's Portfolio - Web Developer and Programmer",
@@ -342,7 +388,7 @@ export const ui = {
     top_label: "Available for Work",
     top_text_part_1: "Full Stack Developer",
     top_text_part_2: "with",
-    top_text_part_3: "6 months of experience",
+    top_text_part_3: "7 months of experience",
     top_text_part_4: "in creating",
     top_text_part_5: "efficient and scalable web solutions",
     top_download_cv_text: "CV",
@@ -353,20 +399,9 @@ export const ui = {
     tech_stack_version_control: "Version Control",
     tech_stack_integration: "Integration",
     //
-    about_me_part_1: "My name is Sergio, and ",
-    about_me_part_2: "I started programming 5 years ago",
-    about_me_part_3:
-      ". Today, my dream is to find a place where I feel comfortable and can contribute with my knowledge and skills.",
-    about_me_part_4:
-      "A lover of video games and music, I enjoy all genres. Sometimes, I also feel the need to watch a movie or series.",
-    about_me_part_5:
-      "One of the things that best defines me is that I am a very ",
-    about_me_part_6: "sociable",
-    about_me_part_7: " person, always striving to be a good teammate, ",
-    about_me_part_8: "as well as competitive",
-    about_me_part_9: ". I always try to help my team achieve victory, ",
-    about_me_part_10: "giving my 100%",
+    about_me_text:
+      "My name is Sergio, and I've been passionate about software development for 5 years. My current goal is to continue growing as a Full Stack Developer in a dynamic team where I can contribute my knowledge of web technology, solve complex problems, and keep learning best practices. Outside of coding, I'm enthusiastic about the world of video games, music, and cinema. I consider myself a sociable person, highly oriented towards teamwork, and with a healthy competitive spirit: I always strive to give 100% so that the project and the team achieve their goals.",
     //
-    footer_copyright: "2025 Sergio-JG. Hello World.",
+    footer_copyright: "2026 Sergio-JG. Hello World.",
   },
 } as const;

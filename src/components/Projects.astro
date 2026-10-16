@@ -10,5 +10,5 @@ const lang = getLangFromUrl(Astro.url);
   (lang === "es"
     ? project_dictionary.PROJECT_ES
     : project_dictionary.PROJECT_EN
-  ).map((project) => <ProjectItem {...project} />)
+  ).map((project) => <ProjectItem {...project} github={project.github ?? ""} />)
 }
