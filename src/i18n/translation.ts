@@ -199,7 +199,7 @@ export const experience_dictionary = {
   EXPERIENCE_EN: [
     {
       date: "Sep.2026 - Oct.2026",
-      type: "Desarrollador de Software - European Business School",
+      type: "Software Developer - European Business School",
       description:
         "I developed an e-commerce website dedicated to selling wine and related products using the WordPress CMS and plugins such as WooCommerce and Elementor. I also implemented a secure payment system and optimized the user experience with an intuitive and attractive design.",
     },
